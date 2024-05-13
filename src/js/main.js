@@ -2,8 +2,6 @@ function limparFormulario() {
     document.getElementById("carForm").reset();
 }
 
-
-
 function adicionarCarro() {
     var nome = document.getElementById('nome').value;
     var valor = document.getElementById('valor').value;

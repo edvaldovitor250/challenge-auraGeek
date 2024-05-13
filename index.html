@@ -14,19 +14,41 @@
             <header class="text-white text-center" style="font-size: 2rem;">🚗Alura Geek🚗</header>
         </div>
     </div>
-    
-    
-    
-    
 
-
-    <div class="container">
-        <h1 class="display-4 text-primary">Título Personalizado</h1>
+    <div class="container mt-5 border border-danger rounded p-4 float-right" style="max-width: 400px;">
+        <h1 class="text-primary mb-4">Cadastro de Carros</h1>
+        <form id="carForm">
+            <div class="form-group">
+                <label for="nome" class="font-weight-bold">Nome do Carro</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do carro" required>
+            </div>
+            <div class="form-group">
+                <label for="valor" class="font-weight-bold">Valor do Carro</label>
+                <input type="number" class="form-control" id="valor" placeholder="Digite o valor do carro" required>
+            </div>
+            <div class="form-group">
+                <label for="imagem" class="font-weight-bold">URL da Imagem</label>
+                <input type="url" class="form-control" id="imagem" placeholder="Cole a URL da imagem do carro" required>
+            </div>
+            <button type="button" class="btn btn-success btn-lg btn-block mb-2" onclick="adicionarCarro()">Adicionar</button>
+            <button type="button" class="btn btn-danger btn-lg btn-block" onclick="limparFormulario()">Limpar</button>
+        </form>
     </div>
 
+    <div id="carros" class="container mt-3">
+
+    
+    
+    
+    
+    
+    
+    
     
 
+    
 
+    <script src="/src/js/main.js"></script>
     <script src="assets/bootstrap.min.js"></script>
 </body>
 </html>

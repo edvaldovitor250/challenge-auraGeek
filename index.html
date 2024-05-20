@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraGeek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css">
-
+    <link rel="stylesheet" href="./assets/css/car-register.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
 
-    <div style="margin-top: -15px; margin-left: -15px; margin-right: -15px;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 9vh; background-color: rgb(221, 76, 76); margin-top: 0; padding-left: 0; padding-right: 0;">
-            <header class="text-white text-center" style="font-size: 2rem;">🚗Alura Geek🚗</header>
+<body class="d-flex flex-column">
+
+        <div class="container-fluid bg-danger text-white text-center py-3">
+            <header class="display-4">🚗Alura Geek🚗</header>
         </div>
-    </div>
+        <main>
 
-    <div class="container mt-5 border border-danger rounded p-4 float-right" style="max-width: 400px;">
-        <h1 class="text-primary mb-4">Cadastro de Carros</h1>
-        <form id="carForm">
-            <div class="form-group">
-                <label for="nome" class="font-weight-bold">Nome do Carro</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do carro" required>
-            </div>
-            <div class="form-group">
-                <label for="valor" class="font-weight-bold">Valor do Carro</label>
-                <input type="number" class="form-control" id="valor" placeholder="Digite o valor do carro" required>
-            </div>
-            <div class="form-group">
-                <label for="imagem" class="font-weight-bold">URL da Imagem</label>
-                <input type="url" class="form-control" id="imagem" placeholder="Cole a URL da imagem do carro" required>
-            </div>
-            <button type="button" class="btn btn-success btn-lg btn-block mb-2" onclick="adicionarCarro()">Adicionar</button>
-            <button type="button" class="btn btn-danger btn-lg btn-block" onclick="limparFormulario()">Limpar</button>
+        <div id="formcadastro">
+            <h1 class="tituloh1">Cadastrar Novo Carro</h1>
+
+            <form>
+                <div class="main-container">
+                    <div class="right">
+                        <div class="campos">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" class="entradaCat" required />
+                        </div>
+
+                        <div class="campos">
+                            <label for="preco_original">Preço Original:</label>
+                            <input type="number" name="preco_original" pattern="[0-9]+([.][0-9]+)?" step="0.1"
+                                class="entradaCat" required />
+                        </div>
+
+                        <div class="campos">
+                            <label for="preco_promocional">Preço Promocional:</label>
+                            <input type="number" name="preco_promocional" pattern="[0-9]+([.][0-9]+)?" step="0.1"
+                                class="entradaCat" required />
+                        </div>
+
+                        <div class="campos">
+                            <label for="preco_promocional">Categoria:</label>
+                            <select class="custom-file-upload" style="margin: 0;" id="categoria" name="categoria"
+                                required>
+                                <option value="" disabled selected>Selecione uma categoria</option>
+                                <option value="notebooks">Carros Seminovos</option>
+                                <option value="smartphones">Carros 0KM</option>
+                                <option value="computadores">Em Destaque</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="left">
+                        <div class="campos">
+                            <div class="img-preview">
+                                <img id="imagem-preview" src="#" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="campos">
+                            <label for="imagem" class="custom-file-upload">Insira a URL da imagem</label>
+                            <input type="text" id="imagem" name="imagem" required />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="campos">
+                    <input type="submit" value="Cadastrar" class="cadastrar trigger" />
+                </div>
+        </div>
         </form>
-    </div>
-    
-    <div id="carros" class="container mt-3">
-    </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-danger text-white text-center py-3">
+        <div class="display-4">🚗Alura Geek🚗</div>
+    </footer>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/register/img-preview.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+</body>
 
-    <div id="carros" class="container mt-3">
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-        
-        
-        <footer class="container-fluid d-flex justify-content-center align-items-center" style="height: 9vh; background-color: rgb(221, 76, 76);">
-            <div class="text-white text-center" style="font-size: 2rem;">🚗Alura Geek🚗</div>
-        </footer>
-
-
-        <script src="/src/js/main.js"></script>
-        <script src="assets/bootstrap.min.js"></script>
-    </body>
-    
 </html>

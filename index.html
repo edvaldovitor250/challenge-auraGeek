@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,46 +8,50 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css">
     <link rel="stylesheet" href="./assets/css/car-register.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    
 </head>
-
 <body class="d-flex flex-column">
 
-        <div class="container-fluid bg-danger text-white text-center py-3">
-            <header class="display-4">🚗Alura Geek🚗</header>
-        </div>
-        <main>
+    <div class="container-fluid bg-transparent-danger text-white text-center py-3">
+        <header class="display-4">🚗Alura Geek🚗</header>
+    </div>
 
+    <main>
         <div id="formcadastro">
             <h1 class="tituloh1">Cadastrar Novo Carro</h1>
-
-            <form>
+            <form id="carForm">
                 <div class="main-container">
                     <div class="right">
                         <div class="campos">
                             <label for="nome">Nome:</label>
-                            <input type="text" name="nome" class="entradaCat" required />
+                            <input type="text" name="nome" id="nome" class="entradaCat" required />
                         </div>
 
                         <div class="campos">
                             <label for="preco_original">Preço Original:</label>
-                            <input type="number" name="preco_original" pattern="[0-9]+([.][0-9]+)?" step="0.1"
+                            <input type="number" name="preco_original" id="preco_original" pattern="[0-9]+([.][0-9]+)?" step="0.1"
                                 class="entradaCat" required />
                         </div>
 
                         <div class="campos">
                             <label for="preco_promocional">Preço Promocional:</label>
-                            <input type="number" name="preco_promocional" pattern="[0-9]+([.][0-9]+)?" step="0.1"
+                            <input type="number" name="preco_promocional" id="preco_promocional" pattern="[0-9]+([.][0-9]+)?" step="0.1"
                                 class="entradaCat" required />
                         </div>
 
                         <div class="campos">
-                            <label for="preco_promocional">Categoria:</label>
-                            <select class="custom-file-upload" style="margin: 0;" id="categoria" name="categoria"
-                                required>
+                            <label for="ano_lancamento">Ano de Lançamento:</label>
+                            <input type="number" name="ano_lancamento" id="ano_lancamento" class="entradaCat" required />
+                        </div>
+                        
+
+                        <div class="campos">
+                            <label for="categoria">Categoria:</label>
+                            <select class="custom-file-upload" style="margin: 0;" id="categoria" name="categoria" required>
                                 <option value="" disabled selected>Selecione uma categoria</option>
-                                <option value="notebooks">Carros Seminovos</option>
-                                <option value="smartphones">Carros 0KM</option>
-                                <option value="computadores">Em Destaque</option>
+                                <option value="Carros Seminovos">Carros Seminovos</option>
+                                <option value="Carros 0KM">Carros 0KM</option>
+                                <option value="Em Destaque">Em Destaque</option>
                             </select>
                         </div>
                     </div>
@@ -64,22 +67,24 @@
                             <label for="imagem" class="custom-file-upload">Insira a URL da imagem</label>
                             <input type="text" id="imagem" name="imagem" required />
                         </div>
-
                     </div>
                 </div>
                 <div class="campos">
                     <input type="submit" value="Cadastrar" class="cadastrar trigger" />
                 </div>
+            </form>
         </div>
-        </form>
-        </div>
+
+        <div id="output"></div>
+    
     </main>
-    <footer class="container-fluid bg-danger text-white text-center py-3">
+    
+    <footer class="container-fluid bg-transparent-danger text-white text-center py-3">
         <div class="display-4">🚗Alura Geek🚗</div>
     </footer>
+
     <script src="/src/js/main.js"></script>
     <script src="/src/js/register/img-preview.js"></script>
     <script src="assets/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -12,7 +12,9 @@
 }
 
 body {
-    background-color: #f8f9fa;
+    background-image: url('https://wallpapercave.com/wp/wp7927096.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
